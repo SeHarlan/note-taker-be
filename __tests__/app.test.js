@@ -51,4 +51,24 @@ describe('note-taker-be routes', () => {
         }]);
       });
   });
+  it('deletes a note by id', () => {
+    Note.create({
+      title: 'test title',
+      body: 'test body'
+    })
+      .then(note => {
+        return request(app)
+          .delete(`/api/v1/notes/${note._id}`)
+          .then(res => {
+            expect(res.body).toEqual({
+              _id: expect.any(String),
+              title: 'test title',
+              body: 'test body',
+              createdAt: expect.any(String),
+              updatedAt: expect.any(String),
+              __v: 0
+            });
+          });
+      });
+  });
 });
