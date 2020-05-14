@@ -1,7 +1,6 @@
 {
   "name": "note-taker-be",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "scripts": {
     "test": "jest --verbose --runInBand --testLocationInResults",
@@ -27,8 +26,21 @@
     "supertest": "^4.0.2"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "mongoose": "^5.9.13"
-  }
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SeHarlan/note-taker-be.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SeHarlan/note-taker-be/issues"
+  },
+  "homepage": "https://github.com/SeHarlan/note-taker-be#readme",
+  "description": ""
 }
